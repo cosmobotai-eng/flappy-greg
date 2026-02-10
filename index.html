@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Greg - The Pants-Shitting Bird</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #87CEEB 0%, #87CEEB 70%, #98FB98 70%, #98FB98 100%);
+            font-family: 'Comic Sans MS', cursive;
+            overflow: hidden;
+        }
+        
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 3px solid #8B4513;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        
+        .ui {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            z-index: 10;
+        }
+        
+        .game-over {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            z-index: 10;
+            display: none;
+        }
+        
+        .instructions {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="ui">
+        <h2>💩 FLAPPY GREG 💩</h2>
+        <p>Score: <span id="score">0</span></p>
+        <p>High Score: <span id="highScore">0</span></p>
+    </div>
+    
+    <div class="game-over" id="gameOver">
+        <h1>GREG SHIT HIMSELF TO DEATH!</h1>
+        <h3>Final Score: <span id="finalScore">0</span></h3>
+        <p>Press SPACE or click to try again</p>
+        <p style="font-size: 12px;">Maybe Greg should've eaten less fiber...</p>
+    </div>
+    
+    <div class="instructions">
+        <p>Press SPACE or click to make Greg's bowel movements propel him skyward!</p>
+        <p>Avoid the pipes or Greg becomes sidewalk pizza!</p>
+    </div>
+    
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    
+    <script src="game.js"></script>
+</body>
+</html>
